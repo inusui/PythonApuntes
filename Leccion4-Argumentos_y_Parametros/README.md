@@ -119,3 +119,46 @@ output
 nombre:Ricardo
 
 edad:27```
+
+
+## Funciones recursivas
+ez, dentro de una funcion llamala asi misma y sin necesitad de un blucle haces recursion. 
+
+```py
+def factorial(numero):
+    print ("\nValor inicial =>", numero)
+    if numero > 1:
+        numero *= factorial(numero - 1)
+    print ("\nValor Final =>", numero)
+    return numero
+
+print (factorial(5))
+```
+_Output_ ```Valor inicial => 5
+
+Valor inicial => 4
+
+Valor inicial => 3
+
+Valor inicial => 2
+
+Valor inicial => 1
+
+Valor Final => 1
+
+Valor Final => 2
+
+Valor Final => 6
+
+Valor Final => 24
+
+Valor Final => 120
+120```
+
+## Funcione Integradas. 
+
+### evaluar
+Evalua un string, lo calcula. si se mete una varible interpreta una variable que exista. 
+
+### Help()
+te muestra lo que se necesitan por topicos. 

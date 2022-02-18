@@ -34,3 +34,9 @@ while (True):
         print("NICE")
         break
 ```
+
+
+## Invocar Exceptions
+```raise```
+https://docs.python.org/3/library/exceptions.html#base-classes
+https://docs.hektorprofe.net/python/errores-y-excepciones/invocacion-de-excepciones/

@@ -20,6 +20,7 @@ es un objeto que mientras esta el programa corriendo, existe.
 ## __init__
 * Se ejecuta al crear un Objeto nuevo
 * Permite enviar argumentos durante la Instanciacion. 
+* Metodo Constructor!! __init__
 
 ### Ejemplo 
 ```py

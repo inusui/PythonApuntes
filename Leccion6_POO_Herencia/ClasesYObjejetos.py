@@ -1,7 +1,3 @@
-from email.errors import StartBoundaryNotFoundDefect
-from telnetlib import GA
-
-
 class Galleta():
     chocolate = False
     def __init__(self, sabor= None, forma = None):#se ejecuta al crear un nuevo Objeto

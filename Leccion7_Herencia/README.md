@@ -49,9 +49,37 @@ Propiedad de la herencia en que objetos de distintas subclases pueden responder 
 ```py
 def rebajar_producto(p, rebaaja):
     """Devuelve un producto con una rebaja en porcentaje de su precio """
-    p.precio = p.precio - (p.precio / 100 * rebaaja)
+    p.precio = p.precio - (p.precio / 100 * rebaja)
     return p
 ```
 
 El metodo ```rebajar_producto``` Recibe objetos de distintas clases y accede el atributo ```precio``` dando por hecho que existe en ellos. 
 
+## Llamar y usar Metodos de la super clase.
+En ocaciones necesitamos usar los mismos argumentos de la super clase en las sub clases, por ello se deben llamar en la subclase y asi no reescribir codigo. 
+
+```py
+class SuperClase():
+    def __init__(self,nombre):
+        self.nombre = nombre
+    
+class Hija(SuperClase):
+    def __init__ (self, nombre, Id )
+    SuperClase.__init__(self, nombre)
+    self.Id = Id
+
+```
+de esa manera podemos acceder a los elementos de la clase padre desde la clase hija, se aplica la herencia
+
+#### Usando Super()
+```py
+class SuperClase():
+    def __init__(self,nombre):
+        self.nombre = nombre
+    
+class Hija(SuperClase):
+    def __init__ (self, nombre, Id )
+    super().__init__(nombre)
+    self.Id = Id
+    
+```

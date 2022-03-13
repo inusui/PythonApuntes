@@ -1,0 +1,1 @@
+el __pycache__ simplemente guarda informacion sobre la ejecucion del fichero

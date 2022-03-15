@@ -1,5 +1,4 @@
 import datetime
-import imp
 
 fecha1 = datetime.datetime.now()
 print(fecha1)
@@ -43,6 +42,9 @@ print("Sumar 2 semanas a este dia", en2)
 hace2 = dt - t
 print("Hace 2 semanas" , hace2)
 
-import pytz
+import pytz #Libreria bajada de internet
+
 dt = datetime.datetime.now(pytz.timezone('Asia/Tokyo'))
 print(dt.strftime("%A %d %B del %Y - %H:%M")) 
+
+

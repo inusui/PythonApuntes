@@ -70,7 +70,7 @@ print( linea )
 
 #modificar de la 3era linea
 
-lineas[1] = "Ahora es otra cosa heho\n"
+lineas[1] = "Ahora es otra cosa \n"
 print(lineas)
 
 fichero.seek(0)

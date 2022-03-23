@@ -1,8 +1,3 @@
-
-import imp
-import re
-
-
 n = 25
 
 print ('''Binario {}

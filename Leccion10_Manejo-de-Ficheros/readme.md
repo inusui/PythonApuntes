@@ -31,3 +31,6 @@ a
 ```
 
 * para usar un cliclo for simple se usa read.lines()
+
+## Json
+es importante saber como se guarda el json para cargarlos

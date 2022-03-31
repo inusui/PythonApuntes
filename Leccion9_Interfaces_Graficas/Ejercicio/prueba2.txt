@@ -1,0 +1,6 @@
+Probando el Texto
+Escribo en mi editor de Texto programado con Python
+Lo abri y ahora lo editare para guardarlo
+
+Ahora solo con el boton guardar.
+

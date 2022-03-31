@@ -1,5 +1,6 @@
 from tkinter import *
 from tkinter import filedialog
+from io import open
 
 ruta = "" #almacenar la ruta de un fichero
 
@@ -9,13 +10,35 @@ root.iconbitmap("recursos/note.ico")
 
 #Funciones del Fichero
 def nuevo ():
+    global ruta #Para asignar una variable que esta fuera de la clase. 
     mensaje.set("Nuevo Archivo")
+    ruta = ""
+    texto.delete(1.0, "end")#Borrar desde el 1 hasta el final no es desde el 0 para mantener el salto de linea que es el primer caracter
 
 def abrir ():
+    global ruta
     mensaje.set("Abrir Archivo")
+    ruta = filedialog.askopenfilename(initialdir='.', 
+    filetypes=(("Ficheros de Texto","*.txt"),
+    ), title="Abrir Fichero de Texto")
+    
+    if ruta != None:
+        file = open(ruta,"r")
+        contenido = file.read()
+        texto.delete(1.0,"end")
+        texto.insert('insert', contenido)
+        file.close()
+        mensaje.set(ruta+" - Editor de Texto")
 
 def guardar ():
     mensaje.set("Guardar Archivo")
+    if ruta != "":
+        contenido = texto.get(1.0, 'end')#desde el caracter 1
+        file = open(ruta, "w+")
+        file.write(contenido)
+        file.close()
+        mensaje.set("El fichero se a guardado correctamente - Editor de Texto")
+
 
 def guardarComo ():
     mensaje.set("Guardar Como Archivo")

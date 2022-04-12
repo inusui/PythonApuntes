@@ -1,6 +1,4 @@
-from imaplib import Int2AP
 import random
-from tkinter import Y
 
 #Funciones 
 def GeneradorPassword():

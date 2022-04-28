@@ -64,3 +64,101 @@ print(
  "\nInteresante, si uso un len(), me dice la cantidad", len(re.findall("hola",texto)),
  "\nPara buscar varias alternativas '(hola|hello)'", re.findall("(hola|hello)",texto)
 )
+
+
+# Buscar patrones por letras repetidas. 
+
+texto = "hla hola hoola hoooooooooooooooooooola holaaaaaaaaaaaaaaaaaaaa ola"
+
+def buscar(patron, texto):
+    for pat in patron:
+        print (re.findall(pat, texto))
+        if (len(re.findall(pat,texto)) > 1):
+            print("Se encontro", len(re.findall(pat,texto)), "Veces")
+        else:
+            print("Se encontro", len(re.findall(pat,texto)), "Vez")
+
+patronesABuscar = ['hla', 'hola', 'hoola']
+buscar(patronesABuscar,texto)
+
+
+#Meta-Caracter * 
+# null o mas de 1
+print( "\nNinguna o mas veces de la letra de la izquierda")
+patronesABuscar = ['ho', 'ho*', 'ho*la']
+buscar(patronesABuscar, texto)
+
+#Meta-caracter +
+# Una o mas repeticiones de la letra de la izquierda
+# desde 1
+
+print("\nMeta-Caracter +")
+patronesABuscar = ['ho*', 'ho+']
+buscar(patronesABuscar, texto)
+
+#Meta Caracter ?
+# Una o ninguna repeticion del caracter a su izquierda
+# 1 o null
+print("\nMeta-Caracter ?")
+patronesABuscar = ['ho*', 'ho?', 'ho?la']
+buscar(patronesABuscar, texto)
+
+#Numero x de repeticiones
+print("\nX cantidad de Repeticiones con {n}")
+patronesABuscar = ['ho{0}la'] #la O se reptite 0 veces
+buscar(patronesABuscar, texto)
+
+# Rango de busqueda 
+
+print("\nUn rango de veces que me aparezca el caracter anterior")
+patronesABuscar = ['ho{0,2}la'] #Aparezca la o de 0 hasta 2 veces
+buscar(patronesABuscar, texto)
+
+
+#! Caracteres Regulares III
+#Patrones con diferentes Conjuntos de Caracteres
+print("\n\nPatrones en conjunto de Caracteres")
+texto = "hala hela hila hola hula"
+patronesABuscar = ['h[ou]la']#Buscara en la posicion 2 los caracteres que coincidan con lo que esta dentro del []
+buscar(patronesABuscar,texto)
+
+#Patrones diferentes + cantidad
+print("\nBuscar segun conjunto y con Meta-caracteres")
+texto = "haala heeeeela hiiiiiila hooooooooola"
+patronesABuscar = ['h[ae]la', 'h[ae]*la', 'h[io]{3,9}la']
+buscar(patronesABuscar,texto)
+
+#Busqueda contraria con ^
+print("\nBuscar segun negar un caracter [^]")
+texto = "hala hela hila hola hula"
+patronesABuscar = ['h[^o]la'] 
+#Se niega a la o
+buscar(patronesABuscar,texto)
+
+
+#Busqueda con [-] Rangos especiales 
+'''
+[A-Z] Cualquier caracter en mayusculas
+[a-z] Caracter alfabetico en minusculas
+[A-Za-z] o [A,z] Caracter alfabetico minuculas o mayusculas
+[0-9] Caracter Numerico
+[a-zA-Z0-9] Cualquier Caracter no especial
+'''
+print("\nBuscar Segun rangos  [^]")
+texto = "hola h0la Hola Mola m0la M0la ;;"
+patronesABuscar = ['h[a-z]la' , 'h[0-9]la', '[A-z]{4}', '[\W]{2}' ]
+                                            #Cualquier cosa con mas de 4 letras
+buscar(patronesABuscar,texto)
+
+# Codigo Escapado o con \
+'''
+Caracteres Escapados 
+\d Numerico         \D No Numerico          \s Espacio en Blanco
+\s no Espacio en blanco     \w Alfanumerico     \W No alfanumerico
+'''
+
+print("\nCon codigos 'Escapado\'")
+texto="Este curso de python 3 lo estoy haciendo en el 2022, me siento un anciano pip"
+patronesABuscar = ['\d','\d+','p[\D]', '\D+']
+# if \S+ o \w+ todas las palabras
+buscar(patronesABuscar,texto)

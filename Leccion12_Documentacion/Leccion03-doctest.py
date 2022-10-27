@@ -1,5 +1,6 @@
 def suma(a,b):
     ''' trata de ejecutar un comando cuando se ejecuta el help
+    La Funcion suma(a,b) recibe dos parametros y devuelve la suma de los mismos.
     
     >>> suma(5,10)
     15

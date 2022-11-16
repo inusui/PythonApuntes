@@ -2,13 +2,13 @@
 from setuptools import setup
 
 setup (
-    name="paquete",
-    version= "0.1",
-    description="Paquete de testeo",
-    author="SoyInusui",
+    name="mensajes",
+    version= "2",
+    description="Paquete para saludar y despedir",
+    author="Inusui",
     author_email="inusui@protonmail.com",
     url="https://mypage.com",
-    scripts=[],
-    packages=['paquetes', 'paquetes.adios', 'paquetes.hola']
+    packages=['paquetes', 'paquetes.adios', 'paquetes.hola'],
+    scripts=['test.py']
 )
 

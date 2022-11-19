@@ -21,7 +21,7 @@ setup (
 )
 ```
 
-### se ejecuta el setup.py
+## se ejecuta el setup.py
 desde terminal
 ```python setup.py sdist```
 esto creara una carpeta dist, dentro de dicha carpeta hay un fichero comprimido con nuestro paquete
@@ -38,3 +38,18 @@ esto es porque en el setup ( se importaron los paquetes necesarios para le ejecu
 ```pip uninstall <paquete>```
 
 al desintalarlo, ya no se ejecutara en cualquier lado del Sistema Operativo
+
+## Instalar paquetes automaticamente
+
+Se debe importar el modulo ```find_package```
+
+dentro del ```setup()```
+en ```packages``` se llama a la funcion
+
+```py
+setup(
+    #... other code
+    package = find_package(),
+    #... code
+)
+```

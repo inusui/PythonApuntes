@@ -1,5 +1,5 @@
 #informacion sobre este paquete
-from setuptools import setup
+from setuptools import setup, find_packages
 
 setup (
     name="mensajes",
@@ -8,7 +8,7 @@ setup (
     author="Inusui",
     author_email="inusui@protonmail.com",
     url="https://mypage.com",
-    packages=['paquetes', 'paquetes.adios', 'paquetes.hola'],
+    packages=find_packages(),
     scripts=['test.py']
 )
 

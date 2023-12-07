@@ -1,6 +1,7 @@
 # Programacion estructurada vs Programacion Orientada a Objetos
 
-## Ejemplo Programacion Estructurada 
+## Ejemplo Programacion Estructurada
+
 ```py
 clientes = [
     {'Nombre': 'Ricardo', 'Apellido' : 'Dominguez'},
@@ -10,19 +11,22 @@ clientes = [
 ```
 
 ## Clases
-las son como el molde para crear objetos 
+
+las son como el molde para crear objetos
 
 * Instanciacion
 es cuando el objeto se crea.
 * instancia
-es un objeto que mientras esta el programa corriendo, existe. 
+es un objeto que mientras esta el programa corriendo, existe.
 
 ## __init__
+
 * Se ejecuta al crear un Objeto nuevo
-* Permite enviar argumentos durante la Instanciacion. 
+* Permite enviar argumentos durante la Instanciacion.
 * Metodo Constructor!! __init__
 
-### Ejemplo 
+### Ejemplo
+
 ```py
 class Galleta():
     chocolate = False

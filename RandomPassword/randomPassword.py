@@ -1,4 +1,5 @@
 import random
+global password, name
 
 #Funciones 
 def GeneradorPassword():
@@ -7,20 +8,23 @@ def GeneradorPassword():
     numbers = "0123456789"
     symbols = "~!@#$%^&*()_+=/*-|\}{[];:?.>,<"
 
-    lenght = int ( input ("Dame la cantidad de caracteres que quieres en tu contraseña\nSe recomiendan 16"))
+    lenght = int ( input ("Dame la cantidad de caracteres que quieres en tu contraseña\nSe recomiendan 16\n"))
 
     all = lower + mayus + numbers + symbols
     password = "".join(random.sample(all, lenght))
     print ("Contraseña Generada=> " , password)
 
-    Guardar()
+    name = Guardar()
+    return password, name
     
 
 def Guardar():
     guardar = input("¿Desea Guardar la contraseña?\n [Y/N]")
-
+    
     if guardar == "Y":
         print ("Eligio que Si.")
+        name = input("Nombre de la contraseña o algo que le recuerde a ella\n")
+        return name
     elif guardar == "N":
         print ("Eligio que No")
     else:
@@ -40,12 +44,11 @@ while controlador == 1:
 Opcion:'''))
 
     if x == 1:
-        GeneradorPassword()
-
+        password, name = GeneradorPassword()
         #pasalo a un archivo txt por lo menos ¿No?
 
         file1 = open("pass.md", "a")
-        file1.write("\n"+ password)
+        file1.write("\n{0}\t[{1}]".format(name, password))
         file1.close()
 
         #Leer lineas

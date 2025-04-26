@@ -15,3 +15,13 @@
 ### Distribucion de paquetes
 
     Publicacion de paquetes en pip.
+
+## Jupyter en windows
+
+[Instalacion Jupyther](https://jupyter.org/install)
+
+### instalar Notebook
+
+```bash
+pip install notebook
+```

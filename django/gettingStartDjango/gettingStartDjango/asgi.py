@@ -1,5 +1,6 @@
 """
-ASGI config for gettingStartDjango project.
+# gettingStartDjango - A Django project for learning and experimentation
+Apigateway for Django's asingcronous server gateway interface (ASGI) config.
 
 It exposes the ASGI callable as a module-level variable named ``application``.
 

@@ -33,3 +33,14 @@ por ejemplo el siguiente comando `pipenv run python manage.py runserver` se pued
 server = "python manage.py runserver"
 ```
 ## Configuraciones basicas
+
+en [settings.py](gettingStartDjango/gettingStartDjango/settings.py) existe esto
+
+```python
+# TODO: SECURITY WARNING: don't run with debug turned on in production!
+DEBUG = False
+
+ALLOWED_HOSTS = ["127.0.0.1"]
+```
+Ese debug debe estar en False para entornos productivos y se deben colocar las rutas a las cuales puedo acceder a mi servicio. 
+por ejemplo si no pongo el `127.0.0.1` no puedo acceder a mi servicio. `CommandError: You must set settings.ALLOWED_HOSTS if DEBUG is False.`

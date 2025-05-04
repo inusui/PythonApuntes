@@ -44,3 +44,15 @@ ALLOWED_HOSTS = ["127.0.0.1"]
 ```
 Ese debug debe estar en False para entornos productivos y se deben colocar las rutas a las cuales puedo acceder a mi servicio. 
 por ejemplo si no pongo el `127.0.0.1` no puedo acceder a mi servicio. `CommandError: You must set settings.ALLOWED_HOSTS if DEBUG is False.`
+
+## Crear apps
+
+### al nivel de manage.py
+
+db.sqlite3  gettingStartDjango/  manage.py*
+
+se crea el app 
+```bash
+pipenv run python manage.py startapp blog
+```
+

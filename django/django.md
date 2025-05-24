@@ -56,3 +56,24 @@ se crea el app
 pipenv run python manage.py startapp blog
 ```
 
+## Modelos
+[models](gettingStartDjango/blog/models.py)
+
+
+Para sincronizar con los modelos creados
+
+```sh
+$ pipenv run python manage.py makemigrations
+```
+
+![makeMigrations](src/image.png)
+
+para aplicarla
+
+```sh
+pipenv run python manage.py migrate
+```
+
+![migrate](src/image2.png)
+
+a estos elementos se le pueden especificar el modelo a migrar y sincronizar añadiendo al final el modelo / tabla

@@ -24,9 +24,9 @@ pipenv run django-admin startproject gettingStartDjango
 
 ## Notas
 
-el [PipFile](Pipfile) es como el package.json de npm donde puedo poner script para ahorrarme el aprenderme comandos
+el [PipFile](Pipfile) es como el package.json de npm donde puedo poner script para ahorrarme el tecle tecle de comandos
 
-por ejemplo el siguiente comando `pipenv run python manage.py runserver` se puede reducir a un `pipenv run server` editanto del pipfile de la siguiente forma
+por ejemplo el siguiente comando `pipenv run python manage.py runserver`, el cual es para iniciar el servidor, se puede reducir a un `pipenv run server` editanto del pipfile de la siguiente forma
 
 ```pipfile
 [scripts]
@@ -42,6 +42,7 @@ DEBUG = False
 
 ALLOWED_HOSTS = ["127.0.0.1"]
 ```
+
 Ese debug debe estar en False para entornos productivos y se deben colocar las rutas a las cuales puedo acceder a mi servicio. 
 por ejemplo si no pongo el `127.0.0.1` no puedo acceder a mi servicio. `CommandError: You must set settings.ALLOWED_HOSTS if DEBUG is False.`
 
@@ -52,6 +53,7 @@ por ejemplo si no pongo el `127.0.0.1` no puedo acceder a mi servicio. `CommandE
 db.sqlite3  gettingStartDjango/  manage.py*
 
 se crea el app 
+
 ```bash
 pipenv run python manage.py startapp blog
 ```
@@ -77,3 +79,12 @@ pipenv run python manage.py migrate
 ![migrate](src/image2.png)
 
 a estos elementos se le pueden especificar el modelo a migrar y sincronizar añadiendo al final el modelo / tabla
+
+## Administrador
+https://docs.djangoproject.com/en/5.2/ref/contrib/admin/
+
+Comando para crear un super usuario
+
+```sh
+pipenv run python manage.py createsuperuser
+```

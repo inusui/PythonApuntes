@@ -3,7 +3,6 @@ from .models import Post
 
 # Register your models here.
 
-@admin.register(Post)
 class PostAdmin(admin.ModelAdmin):
     """Configuracion del admin para el modelo Post"""
 

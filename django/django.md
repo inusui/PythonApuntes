@@ -88,3 +88,23 @@ Comando para crear un super usuario
 ```sh
 pipenv run python manage.py createsuperuser
 ```
+
+Dashboard: http://127.0.0.1:8000/admin/
+
+### Shell
+
+Entrar a ella
+
+```sh
+pipenv run python manage.py shell
+```
+
+Obtener todos los registros `Post.objects.all()`
+Obtener el primero `Post.objects.first()`
+Ultimo: `Post.objects.last()`
+Por indice `Post.objects.get(id={No.})`
+
+Se pueden asignar a variables y luego usarlas
+
+![Comandos](src/image3.png)
+

@@ -108,3 +108,23 @@ Se pueden asignar a variables y luego usarlas
 
 ![Comandos](src/image3.png)
 
+## URLS y Vistas
+
+La vista o pagina se mapea en [gettingStartDjango/urls.py](/gettingStartDjango/urls.py) la cual apunta en este caso a [blog/view.py](/blog/views.py)
+
+Ejemplo
+```py
+from blog.views import home #Importas la vista
+
+urlpatterns = [
+    path('', home), #Defines la url y la funcion que contiene la vista. en este caso estara en la raiz y la funcion seria home
+]
+```
+
+en la vista [view.py](/blog/views.py) es donde colocarias la plantilla html o lo que quieres devolver a lo antes definido en el view.py
+
+Ejemplo
+```py
+def home(request):
+    return render(request, 'home.html')
+```

@@ -28,6 +28,16 @@
 <body>
 
     <h1>Que tal</h1>
+    <h2>Estas son las entradas mas recinetes</h2>
+    {{ posts }}
+
+    {% for post in posts %}
+        <div>
+            {{post.title}} <br>
+            {{post.created}} <br>
+            {{post.content}} <br> <br>
+        </div>
+    {% endfor %}
 
 </body>
 

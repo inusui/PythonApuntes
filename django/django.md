@@ -128,3 +128,16 @@ Ejemplo
 def home(request):
     return render(request, 'home.html')
 ```
+
+## Template Filters como los pipes de angular
+
+https://www.geeksforgeeks.org/python/django-template-filters/
+
+https://docs.djangoproject.com/en/5.2/ref/templates/builtins/#built-in-filter-reference
+
+
+Uso
+```py
+{{post.content | truncatewords:10}}
+
+```

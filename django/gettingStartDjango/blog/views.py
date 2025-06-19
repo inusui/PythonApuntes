@@ -9,3 +9,8 @@ def home(request):
 
 def venus(request):
     return render(request, 'venus/venus.html')
+
+def post(request, _id):
+    post = Post.objects.get(id=_id)
+    return render(request, 'post.html', {"post": post})
+

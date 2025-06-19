@@ -23,6 +23,9 @@
         color: #4CAF50;
         font-size: 2.5em;
     }
+    div {
+        text-align: justify;
+    }
 </style>
 
 <body>
@@ -33,9 +36,10 @@
 
     {% for post in posts %}
         <div>
-            {{post.title}} <br>
-            {{post.created}} <br>
-            {{post.content}} <br> <br>
+            {{post.title | upper}} <br>
+            <span class="date" >{{post.created | date:"SHORT_DATE_FORMAT" }}</span> <br>
+            <p>{{post.content | truncatewords:10}}</p>
+            <a href="/blog/{{post.id}}/">Ver entrada</a> <br> <br>
         </div>
     {% endfor %}
 

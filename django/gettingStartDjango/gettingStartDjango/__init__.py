@@ -1,0 +1,3 @@
+"""
+Inicia el proyecto Django.
+"""

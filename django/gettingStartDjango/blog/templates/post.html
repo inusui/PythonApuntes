@@ -1,6 +1,6 @@
 {% extends "base.html"%}
 
-{% block pageTitle %}{{post.title}} ° blog{% endblock %}
+{% block pageTitle %}{{post.title}} | blog{% endblock %}
 
 {% block content %}
 <div>
@@ -8,6 +8,17 @@
     {{post.created}} <br>
     {{post.content}} <br> <br>
 </div>
+
+{% if request.user.is_authenticated %}
+    {% for grup in user.groups.all %}
+        {% if grup.name == "Editor" %}
+        <p>
+            <a href="{% url 'admin:blog_post_change' post.id %}">Editar entrada</a>
+        </p>
+
+        {% endif %}
+    {% endfor %}
+{% endif %}
 
 <a href="/">Volver</a>
 

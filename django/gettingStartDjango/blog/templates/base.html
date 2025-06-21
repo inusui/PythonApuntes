@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
 
@@ -7,30 +8,12 @@
     <title> {% block pageTitle %}{% endblock %}
     </title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel="icon" type="image/png" href="./icons/django.png">
+    <link rel="icon" type="image/png" href="{% static 'icons/favicon.png' %}">
+    <link rel="stylesheet" href="{% static 'base.css' %}">
 </head>
 
-<style>
-    body {
-        background-color: #f0f0f0;
-        font-family: Arial, sans-serif;
-        color: #333;
-        text-align: center;
-        padding: 50px;
-    }
-
-    h1 {
-        color: #4CAF50;
-        font-size: 2.5em;
-    }
-
-    div {
-        text-align: justify;
-    }
-</style>
-
 <body>
-
+    <img src="{% static 'icons/django.png'%}" class="img" alt="Django Logo">
     <h1>Aprendiendo Django</h1>
     <h2>Arhivo personal de mis entradas</h2>
 

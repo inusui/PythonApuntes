@@ -16,11 +16,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from blog.views import home, venus, post 
+from blog.views import home, venus, post
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', home),
     path('venus/', venus),
     path('blog/<int:_id>/', post, name='post_detail')
-]
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

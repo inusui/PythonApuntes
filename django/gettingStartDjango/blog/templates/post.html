@@ -1,12 +1,14 @@
 {% extends "base.html"%}
 
+{% block pageTitle %}{{post.title}} ° blog{% endblock %}
+
 {% block content %}
 <div>
-        {{post.title}} <br>
-        {{post.created}} <br>
-        {{post.content}} <br> <br>
-    </div>
+    {{post.title}} <br>
+    {{post.created}} <br>
+    {{post.content}} <br> <br>
+</div>
 
-    <a href="/">Volver</a>
+<a href="/">Volver</a>
 
 {% endblock %}

@@ -140,3 +140,19 @@ Uso
 ```py
 {{post.content | truncatewords:10}}
 ```
+
+## Otra forma de escribir Urls
+
+En [urls](./gettingStartDjango/gettingStartDjango/urls.py) puedes asignar un nombre a cada ruta usando el parámetro name en la función path. Este nombre te permite referenciar la URL fácilmente desde los templates.
+
+```py
+    path('blog/<int:_id>/', post, name='post_detail')
+```
+
+Luego, en el template, puedes generar la URL usando la etiqueta {% url %} de la siguiente manera:
+```html
+    <a href="{% url 'post_detail' _id=post.id %}">Ver entrada con template url</a><br>
+```
+* {% url %}: es la etiqueta de Django para generar URLs.
+* 'post_detail': corresponde al valor de name en la ruta.
+* _id=post.id: es el argumento que la ruta espera.

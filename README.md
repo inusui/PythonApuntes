@@ -10,7 +10,9 @@
 
 ---
 
-## Que se hace
+## Que se hace en el curso
+
+* Django: Es la forma Python para realizar paginas webs de forma rapida, permite la herencia de templates html asi como si fuera angular, ademas de un administrador nativo 
 
 ### Distribucion de paquetes
 

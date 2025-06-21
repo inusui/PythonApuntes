@@ -1,40 +1,7 @@
-<!DOCTYPE html>
-<html>
+{% extends "base.html"%}
 
-<head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>{{post.title}}</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
-    <script src='main.js'></script>
-</head>
-
-<style>
-    body {
-        background-color: #f0f0f0;
-        font-family: Arial, sans-serif;
-        color: #333;
-        text-align: center;
-        padding: 50px;
-    }
-
-    h1 {
-        color: #4CAF50;
-        font-size: 2.5em;
-    }
-
-    div {
-        text-align: justify;
-    }
-</style>
-
-<body>
-
-    <h1>Que tal</h1>
-    <h2>Una sola entrada</h2>
-
-    <div>
+{% block content %}
+<div>
         {{post.title}} <br>
         {{post.created}} <br>
         {{post.content}} <br> <br>
@@ -42,6 +9,4 @@
 
     <a href="/">Volver</a>
 
-</body>
-
-</html>
+{% endblock %}

@@ -139,5 +139,4 @@ https://docs.djangoproject.com/en/5.2/ref/templates/builtins/#built-in-filter-re
 Uso
 ```py
 {{post.content | truncatewords:10}}
-
 ```

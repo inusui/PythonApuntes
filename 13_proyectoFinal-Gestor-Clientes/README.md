@@ -19,3 +19,9 @@ requirements.txt
 * modificar
 * menu para la terminal
 * Uso de Tkinter con todo el CRUD
+
+## Ejecutar test unitarios en el entorno virtual
+
+```sh
+ pipenv run pytest -v
+```

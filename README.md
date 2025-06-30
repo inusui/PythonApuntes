@@ -12,7 +12,12 @@
 
 ## Que se hace en el curso
 
+* Pruebas unitarias
+
+### Frameworks
+
 * Django: Es la forma Python para realizar paginas webs de forma rapida, permite la herencia de templates html asi como si fuera angular, ademas de un administrador nativo 
+* Instalador de paquetes: [Distribucion de paquetes](14_ejecutables/)
 
 ### Distribucion de paquetes
 

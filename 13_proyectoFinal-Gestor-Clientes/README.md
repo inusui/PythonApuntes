@@ -1,8 +1,14 @@
-# Proyecto de GEstor de clientes en Python
+# Proyecto de Gestor de clientes en Python
 
-## Requisitor para usarlo
+Proyecto que almacena todos los conocimientos obtenidos en el curso
 
-Visitar el archivo requirements.txt
+## Requerimientos para usarlo
+
+Comando para instalar los requisitos
+
+```py
+requirements.txt
+```
 
 ## Que hace
 

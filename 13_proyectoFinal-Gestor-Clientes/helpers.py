@@ -2,7 +2,7 @@
 Se puede usar en varios scripts
 
 """
-
+import re
 import os
 import platform
 
@@ -21,3 +21,12 @@ def leer_texto(longitud_min=0, longitud_max=100, mensaje=None):
         else:
             print("Try again")
         
+def validate_dni(dni, lista):
+    if not re.match('[0-9]{2}[A-Z]$',dni):
+        print("Invalid DNI")
+        return False
+    for cliente in lista:
+        if cliente.dni == dni:
+            print("Ese ya se uso")
+            return False
+    return True

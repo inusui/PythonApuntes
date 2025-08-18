@@ -3,3 +3,17 @@ __pycache__
 *.ipynb_checkpoints/
 *.code-workspace
 *.vscode
+
+
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+.env
+*.log

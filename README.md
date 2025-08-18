@@ -43,3 +43,6 @@ _Es como npm o asi lo veo yo_
 ```bash
 pip install pipenv
 ```
+Tambien funciona
+
+pipenv install 
